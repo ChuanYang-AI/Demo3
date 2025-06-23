@@ -387,92 +387,6 @@ sequenceDiagram
     end
 ```
 
-## 📊 性能监控架构图
-
-```mermaid
-graph TB
-    %% 数据收集层
-    subgraph "数据收集层 Data Collection"
-        A[API请求日志<br/>Request Logs]
-        B[模型推理指标<br/>Model Metrics]
-        C[系统性能指标<br/>System Metrics]
-        D[用户反馈数据<br/>User Feedback]
-    end
-    
-    %% 数据处理层
-    subgraph "数据处理层 Data Processing"
-        E[日志聚合器<br/>Log Aggregator]
-        F[指标计算器<br/>Metrics Calculator]
-        G[异常检测器<br/>Anomaly Detector]
-        H[趋势分析器<br/>Trend Analyzer]
-    end
-    
-    %% 存储层
-    subgraph "存储层 Storage Layer"
-        I[实时数据流<br/>Real-time Stream]
-        J[历史数据库<br/>Historical Database]
-        K[配置存储<br/>Config Storage]
-        L[告警规则库<br/>Alert Rules]
-    end
-    
-    %% 分析层
-    subgraph "分析层 Analytics Layer"
-        M[性能仪表板<br/>Performance Dashboard]
-        N[质量分析报告<br/>Quality Reports]
-        O[趋势预测<br/>Trend Prediction]
-        P[优化建议<br/>Optimization Advice]
-    end
-    
-    %% 告警层
-    subgraph "告警层 Alert Layer"
-        Q[实时告警<br/>Real-time Alerts]
-        R[邮件通知<br/>Email Notifications]
-        S[短信告警<br/>SMS Alerts]
-        T[自动修复<br/>Auto Recovery]
-    end
-    
-    %% 数据流连接
-    A --> E
-    B --> F
-    C --> G
-    D --> H
-    
-    E --> I
-    F --> I
-    G --> J
-    H --> J
-    
-    I --> M
-    J --> N
-    J --> O
-    O --> P
-    
-    G --> Q
-    Q --> R
-    Q --> S
-    Q --> T
-    
-    %% 配置连接
-    K --> F
-    K --> G
-    L --> Q
-    
-    %% 反馈连接
-    P --> K
-    T --> A
-    
-    %% 样式定义
-    classDef collectClass fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px
-    classDef processClass fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
-    classDef storageClass fill:#e0f2f1,stroke:#00695c,stroke-width:2px
-    classDef analyticsClass fill:#fff3e0,stroke:#ff8f00,stroke-width:2px
-    classDef alertClass fill:#ffebee,stroke:#d32f2f,stroke-width:2px
-    
-    class A,B,C,D collectClass
-    class E,F,G,H processClass
-    class I,J,K,L storageClass
-    class M,N,O,P analyticsClass
-    class Q,R,S,T alertClass
 ```
 
 ## 📋 图表说明
@@ -508,11 +422,6 @@ graph TB
 - **质量反馈**：用户评价驱动的持续优化
 - **实时监控**：全链路的性能和质量监控
 
-### 性能监控架构图
-- **分层监控**：从数据收集到告警处理的5层架构
-- **实时处理**：支持实时数据流和历史数据分析
-- **智能告警**：异常检测和自动修复机制
-- **可视化分析**：性能仪表板和趋势预测
 
 ---
 *文档基于真实微调项目架构*  
