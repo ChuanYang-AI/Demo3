@@ -1,0 +1,47 @@
+# 酒店AI模型微调项目默认配置
+
+# Vertex AI配置
+vertex_ai:
+  location: "us-central1"
+  model_name: "gemini-2.5-flash"
+  
+# 数据质量筛选配置
+data_quality:
+  min_score: 7                    # 最低质量分数 (1-10)
+  batch_size: 12                  # 批处理大小
+  max_workers: 6                  # 最大并发数
+  
+  # 质量规则配置
+  rules:
+    min_question_length: 8        # 问题最小长度
+    max_question_length: 120      # 问题最大长度
+    min_answer_length: 30         # 回答最小长度
+    max_answer_length: 1200       # 回答最大长度
+    min_answer_content_length: 20 # 回答内容最小长度
+    require_question_mark: true   # 是否要求问题包含疑问标记
+    require_hotel_keywords: true  # 是否要求包含酒店关键词
+
+# 模型微调配置
+model_tuning:
+  learning_rate: 1        # 学习率
+  epochs: 10                     # 训练轮数
+  validation_split: 0.2         # 验证集比例
+  
+# 日志配置  
+logging:
+  level: "INFO"                  # 日志级别
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+# 文件路径配置
+paths:
+  dataset_dir: "dataset"
+  raw_data_dir: "dataset/raw"
+  processed_data_dir: "dataset/processed"
+  reports_dir: "dataset/reports"
+  logs_dir: "logs"
+
+# 性能配置
+performance:
+  max_memory_usage_gb: 8         # 最大内存使用量 (GB)
+  enable_progress_bar: true      # 是否显示进度条
+  save_intermediate_results: true # 是否保存中间结果 
