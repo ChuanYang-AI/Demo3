@@ -57,8 +57,8 @@ def parse_arguments():
     
     parser.add_argument(
         "--model-name",
-        default="gemini-2.5-flash",
-        help="使用的模型名称 (默认: gemini-2.5-flash)"
+        default="gemini-2.0-flash",
+        help="使用的模型名称 (默认: gemini-2.0-flash)"
     )
     
     parser.add_argument(

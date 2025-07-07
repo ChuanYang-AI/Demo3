@@ -177,7 +177,7 @@ class HotelDataQualityFilter:
     
     def __init__(self, credentials_path: Optional[str] = None, 
                  project_id: Optional[str] = None,
-                 model_name: str = "gemini-2.5-flash",
+                 model_name: str = "gemini-0-flash",
                  log_level: str = "INFO"):
         """
         初始化筛选器

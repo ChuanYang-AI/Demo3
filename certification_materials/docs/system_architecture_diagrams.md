@@ -18,7 +18,7 @@ graph TB
     %% 数据处理层
     subgraph "数据处理层 Data Processing Layer"
         D[规则预筛选器<br/>Rule-based Filter]
-        E[AI质量评估器<br/>Gemini 2.5 Flash]
+        E[AI质量评估器<br/>Gemini 2.0 Flash]
         F[数据格式转换器<br/>Google AI Format]
     end
     
@@ -120,7 +120,7 @@ flowchart TD
     
     %% AI质量评估
     Stage2 --> AIBatch[批量处理<br/>12条目/批次<br/>6线程并发]
-    AIBatch --> AIModel[Gemini 2.5 Flash<br/>质量评估模型]
+    AIBatch --> AIModel[Gemini 2.0 Flash<br/>质量评估模型]
     AIModel --> AIScore[多维度评分<br/>1-10分评价<br/>问题清晰度<br/>回答专业性<br/>逻辑一致性]
     
     %% AI评估结果

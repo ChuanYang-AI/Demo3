@@ -130,7 +130,7 @@ python scripts/tune_model.py \
 
 ### AI质量评估
 
-- **批量评估**: 使用Gemini 2.5 Flash进行批量质量评估
+- **批量评估**: 使用Gemini 2.0 Flash进行批量质量评估
 - **多维度评分**: 问题清晰度、回答专业性、逻辑一致性
 - **智能解析**: 自动解析AI响应，支持容错处理
 
@@ -152,7 +152,7 @@ data_quality:
   max_workers: 6                  # 最大并发数
   
 model_tuning:
-  model_name: "gemini-2.5-flash"  # 基础模型
+  model_name: "gemini-2.0-flash"  # 基础模型
   learning_rate: 0.001            # 学习率
   epochs: 10                      # 训练轮数
 ```
