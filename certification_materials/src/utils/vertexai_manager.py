@@ -17,7 +17,7 @@ class VertexAIManager:
     def __init__(self, credentials_path: Optional[str] = None, 
                  project_id: Optional[str] = None,
                  location: str = "us-central1",
-                 model_name: str = "gemini-2.5-flash"):
+                 model_name: str = "gemini-2.0-flash"):
         """
         初始化 Vertex AI 客户端
         
